@@ -1,0 +1,20 @@
+{
+  "name": "curso-scope-closure",
+  "version": "1.0.0",
+  "description": "Some scope and closure experiments for learning 🤓",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fer-dev-gt/curso-scope-closure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fer-dev-gt/curso-scope-closure/issues"
+  },
+  "homepage": "https://github.com/Fer-dev-gt/curso-scope-closure#readme"
+}
