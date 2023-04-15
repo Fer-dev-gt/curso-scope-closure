@@ -29,4 +29,4 @@ export function sumWithClosure(firstNumber) {
   }
 
   // Solución en una sola linea
-  export const sumWithClosure = (firstNum) => (secN = 0) => firstNum + secN
+  export const sumWithClosure = (firstNumber) => (secNumber = 0) => firstNumber + secNumber;
