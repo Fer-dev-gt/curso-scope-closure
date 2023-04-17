@@ -29,7 +29,7 @@ myMoneyBox(5);
 myMoneyBox(15);                                 // Los valores de las variablas se recuerdan es su debido "Entorno Léxico"
 
 console.log('El registro de los ahorros de Ana');
-const moneyBoxAna = moneyBox();                 // Instanicamos / creamos otro "Entorno Léxico" el cual lo guardamos en otra variable
+const moneyBoxAna = moneyBox();                 // Instanciamos / creamos otro "Entorno Léxico" el cual lo guardamos en otra variable
 moneyBoxAna(10);
 moneyBoxAna(20);
 moneyBoxAna(5);

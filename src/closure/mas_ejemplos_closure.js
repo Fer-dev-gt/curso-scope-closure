@@ -44,6 +44,7 @@ const generar = crearFamilia();
 console.log(generar.generacion());
 
 
+
 // Ejemplo 2
 function shoppingCart(){
     let cart = [];
@@ -61,7 +62,7 @@ amazon(`Display 24"`);
 
 
 // Primera solucion al Playgrounds de Platzi
-export function createPetList() {
+ function createPetList() {
     const petList = [];
      return function addPet(pet = 0) {
       if (pet != 0) {
@@ -81,7 +82,7 @@ myPetList("firulais");
 myPetList();
   
 // Segunda solucion al Playgrounds de Platzi
-  export function createPetList() {
+   function createPetList() {
     const petList = [];
     return function agregarMostrar(valor = 0) {
         if (!valor) {
@@ -94,7 +95,7 @@ myPetList();
 
 
 // Tercera solucion al Playgrounds de Platzi
-  export function createPetList() {
+   function createPetList() {
     const petList = [];
     return function addPet(pet) {
       if (pet) {
@@ -110,7 +111,93 @@ myPetList();
 console.log(myPetList.petList);
 
 // Solucion más corta (No es la más legible)
-export function createPetList() {
+ function createPetList() {
     const pets = []
     return (info) => info ? pets.push(info): pets
   }
+
+
+// Tercer ejemplo 
+function mosaico() {
+  const figuras = [];
+
+  return function pintar(nuevaFigura) {
+    figuras.push(nuevaFigura);
+
+    let resultado = '';
+    const mainLength = figuras.length * 2;
+    
+    for (let fila = 0; fila < mainLength; fila++) {
+
+      for(let columna = 0; columna < mainLength; columna++) {
+        const valorMax = fila > columna ? fila : columna;
+        const valorMin = fila < columna ? fila : columna;
+
+        const valorPosible = mainLength - (valorMax + 1);
+
+        const indexFigura = valorPosible < valorMin ? valorPosible : valorMin;
+        
+
+        resultado += `${figuras[indexFigura]} `;
+      }
+      resultado += '\n';
+    }
+    return resultado;
+  }
+}
+
+const m = mosaico();
+console.log(m('*'));
+console.log(m('o'));
+console.log(m('+'));
+console.log(m('x'));
+
+
+
+// cuarto ejercicio
+function moneyBox (){
+    
+  let saveCoins = 0 ;
+
+  return {
+    depositar: function countCoins (coins){
+        saveCoins += coins;
+    },
+    retirar: function countCoins (coins){
+        saveCoins -= coins;
+    },
+    saldo: function countCoins (){
+        return saveCoins
+    }
+  }
+
+}
+
+const moneyBoxAna = moneyBox();
+console.log(moneyBoxAna.saldo());
+moneyBoxAna.depositar(5);
+console.log(moneyBoxAna.saldo());
+moneyBoxAna.retirar(1)
+console.log(moneyBoxAna.saldo());
+
+
+
+// Ejercicio 5
+function family() {
+  let family = [];
+
+  return function addMember(member) {
+    family.push(member)
+    console.log(`Esta familia está compuesta por ${family}`)
+  }
+}
+
+let petersFamily = family();
+petersFamily('Peter');
+petersFamily('Camille');
+petersFamily('John');
+
+let emilysFamily = family();
+emilysFamily('Emily')
+emilysFamily('Carl')
+emilysFamily('Sophy')
